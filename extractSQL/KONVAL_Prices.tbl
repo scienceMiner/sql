@@ -1,0 +1,26 @@
+
+if exists (
+	select
+		name
+	from
+		sysobjects
+	where
+		type='U' and
+		name='KONVAL_Prices' and
+		uid = user_id()
+	)
+begin
+    drop table KONVAL_Prices
+end
+go
+
+
+create table KONVAL_Prices
+(
+	Id		numeric		identity primary key,
+	SecurityId	char( 14 )	not null,
+	PriceBid	float		not null,
+	EffectiveDate	datetime	not null,
+	Source		char( 2 )	not null
+)
+go
