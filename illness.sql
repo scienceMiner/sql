@@ -7,3 +7,5 @@ Inception	DATE
 
 insert into ILLNESS values ('Cold (common)', 4, '15-JUN-98');
 insert into ILLNESS values ('Cold (sore throat)', 4, '13-JUL-98');
+insert into ILLNESS values ('COVID-19', 5, '01-APR-2020');
+
